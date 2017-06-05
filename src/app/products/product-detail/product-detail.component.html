@@ -1,3 +1,19 @@
-<p>
-  product-detail works!
-</p>
+<div class="container">
+  <div class="big-image" *ngIf="bigImg !== undefined">
+    <img src="{{bigImg}}" alt="water bottles">
+  </div>
+  <div class="not-image" *ngIf="bigImg === undefined"></div>
+  <div class="item-container">
+    <div class="info">
+      <a routerLink="/">Home</a> &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp;{{type}}
+    </div>
+    <div class="item-box">
+      <div class="center" [routerLink]="['../', 'products', product.id]" *ngFor="let product of products">
+        <a>
+        <img src="{{product.smallimg}}" alt="">
+        <p>{{product.name}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

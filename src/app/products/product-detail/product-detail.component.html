@@ -1,17 +1,45 @@
 <div class="container">
-  <div class="big-image" *ngIf="bigImg !== undefined">
-    <img src="{{bigImg}}" alt="water bottles">
+  <div class="big-image" *ngIf="product.largeimg !== undefined">
+    <img src="{{product.largeimg}}" alt="water bottles">
   </div>
-  <div class="not-image" *ngIf="bigImg === undefined"></div>
+  <div class="not-image" *ngIf="product.largeimg === undefined"></div>
   <div class="item-container">
     <div class="info">
-      <a routerLink="/">Home</a> &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp;{{type}}
+      <a routerLink="/">Home</a> &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp;{{product.type}}
+      &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp;{{product.name}}
+    </div>
+    <div class="main-info">
+      <div class="left">
+        <img src="{{product.smallimg}}">
+      </div>
+      <div class="right">
+        <h1 class="product-title">{{product.name | uppercase}}</h1>
+        <button>CUSTOMIZE THIS PRODUCT</button>
+          <select *ngIf="colors" name="colorSelected">select
+            <option (click)="onColorSelection(color)" *ngFor="let color of colors">{{color}}</option>
+          </select>
+        <p>{{product.description}}</p>
+        <!-- <div class="activities" *ngIf="product.activites">
+          <p *ngFor="let activity in product.activities">{{}}</p>
+        </div> -->
+        <p *ngIf="product.dimensions"><strong>Dimensions: {{product.dimensions}}</strong></p>
+        <p *ngIf="product.material"><strong>Material: {{product.material}}</strong></p>
+        <p *ngIf="product.materialdesc"><strong>{{product.materialdesc}}</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="related-items-box">
+    <div class="title-center">
+      <p>RELATED ITEMS</p>
+    </div>
+    <div class="feature-divider">
+      <div class="divider"></div>
     </div>
     <div class="item-box">
-      <div class="center" [routerLink]="['../', 'products', product.id]" *ngFor="let product of products">
+      <div class="center" [routerLink]="['../', randProduct.id]" *ngFor="let randProduct of randomProducts">
         <a>
-        <img src="{{product.smallimg}}" alt="">
-        <p>{{product.name}}</p>
+        <img src="{{randProduct.smallimg}}" alt="">
+        <p>{{randProduct.name}}</p>
         </a>
       </div>
     </div>

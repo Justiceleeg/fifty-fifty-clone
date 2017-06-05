@@ -1,3 +1,6 @@
+$dark-green: #9eab1e
+$light-green: #cfe120
+
 .big-image
   width: 100vw
   padding-bottom: 35px
@@ -12,12 +15,13 @@
 .item-container
   width: 1200px
   margin: 0 auto
-  font-family: 'Open Sans', sans-serif
-  font-weight: 300
+  .main-info
+    display: flex
 .item-box
   display: flex
   flex-flow: row wrap
   font-size: 15px
+  justify-content: center
   a
     cursor: pointer
     color: black
@@ -27,6 +31,8 @@
 .info
   font-size: 14px
   width: 580px
+  height: 35
+  padding-top: 8px
   margin-bottom: 14px
   margin-left: 10px
 img
@@ -45,11 +51,69 @@ a
   text-decoration: none
 a:hover
   color: #009aab
-p
-  text-align: center
-
 
 
 .container
   width: 100%
   min-height: 537px
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+
+.left
+  width: 590px
+  display: inline-block
+  img
+    width: 550px
+    height: 550px
+
+.right
+  display: inline-block
+  width: 590px
+  .product-title
+    letter-spacing: 2px
+    font-size: 20px
+    font-weight: 300
+    margin-bottom: 15px
+    padding-top: 4px
+  button
+    border: 0
+    border-radius: 2px
+    height: 39px
+    width: 100%
+    padding: 10px 20px 10px 20px
+    color: white
+    background-color: $dark-green
+    font-size: 15px
+    margin-bottom: 17px
+    font-family: 'Droid Sans', sans-serif
+    cursor: pointer
+  button:hover
+    background-color: $light-green
+  p
+    margin-top: 10px
+
+
+
+
+.related-items-box
+  p
+    text-align: center
+  .title-center
+    font-family: 'Open Sans', sans-serif
+    font-size: 18px
+    letter-spacing: 2px
+    font-weight: 300
+    text-align: center
+    height: 46px
+    padding-top: 7px
+    padding-bottom: 7px
+    margin-bottom: 9px
+    display: flex
+    align-items: center
+    justify-content: center
+  .feature-divider
+    .divider
+      border: solid 2px black
+      display: block
+      width: 70px
+      margin: 25px auto

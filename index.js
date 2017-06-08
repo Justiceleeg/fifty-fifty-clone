@@ -14,13 +14,17 @@ app.use(cors());
 
 var db = massive.connectSync({connectionString : connString});
 //create tables
-db.products_create_seed(()=>{});
 db.type_create_seed(()=>{});
+db.products_create_seed(()=>{});
 app.set('db',db);
 var controller = require('./controller');
 
 app.get('/api/collections/:typeId', function(req,res){
   controller.getProductsByType(req,res);
+});
+
+app.get('/api/products/random', function(req, res){
+  controller.getRandomProducts(req,res)
 });
 
 app.get('/api/products/:prodId', function(req, res){

@@ -8,7 +8,7 @@
       <a routerLink="/">Home</a> &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i> &nbsp;{{type}}
     </div>
     <div class="item-box">
-      <div class="center" *ngFor="let product of products">
+      <div class="center" [routerLink]="['../', 'products', product.id]" *ngFor="let product of products">
         <a>
         <img src="{{product.smallimg}}" alt="">
         <p>{{product.name}}</p>

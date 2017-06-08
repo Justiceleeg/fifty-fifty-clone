@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS products;
+
 DROP TABLE IF EXISTS typetable;
 
 CREATE TABLE typetable (
@@ -15,4 +17,5 @@ VALUES (1, 'Double-Wall Vacuum-Insulated Bottles')
       ,(7, 'Cups & Silicon Handle')
       ,(8, 'Food Storage Containers')
       ,(9, 'Lids')
-      ,(10, 'Paracord Handles');
+      ,(10, 'Paracord Handles')
+      ,(11, 'Tumblers')

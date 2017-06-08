@@ -14,7 +14,25 @@ export class DataStorageService {
 
   //get random 4 products (featured)
 
+  getProductById(productId: string) {
+    return this.http.get('http://localhost:4201/api/products/'+productId)
+    .map(
+      (response: Response) => {
+        const data = response.json()
+        return data;
+      }
+    );
+  }
 
+  getRandomProducts(){
+    return this.http.get('http://localhost:4201/api/products/random')
+    .map(
+      (response: Response) => {
+        let data = response.json()
+        return data;
+      }
+    );
+  }
 
   getProductSpread(typeId: string) {
     return this.http.get('http://localhost:4201/api/collections/'+typeId)

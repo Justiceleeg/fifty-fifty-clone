@@ -4,7 +4,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { Response } from '@angular/http';
 
 
-import { UtilityService } from '../../shared/utility.service';
 import { DataStorageService } from '../../shared/data-storage.service';
 
 
@@ -21,7 +20,6 @@ export class ProductSpreadComponent implements OnInit {
   private subscription: Subscription;
 
   constructor(private route: ActivatedRoute,
-              private utilityService: UtilityService,
               private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
@@ -36,15 +34,13 @@ export class ProductSpreadComponent implements OnInit {
   getProductSpread(typeId: string){
     this.dataStorageService.getProductSpread(typeId)
       .subscribe(
-        (products: any) => {
+        (products: any[]) => {
           this.products.push(...products)
-          console.log(this.products)
           this.type = this.products[0].type
           if (typeId === "1"){
             this.bigImg = 'https://cdn.shopify.com/s/files/1/1699/2423/files/Assorted_Bottles_six.jpg?7512745540055226971'
           }
-        }
-        , (error) => console.log(error)
+        },(error) => console.log(error)
       )
   }
 

@@ -4,13 +4,14 @@ var cors = require('cors');
 var massive = require('massive');
 var database = require('./config.js')
 //Need to enter username and password for your database
-const port = 4201;
+const port = 8080;
 var connString = database ;
 
 var app = module.exports = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('dist'))
 
 var db = massive.connectSync({connectionString : connString});
 //create tables

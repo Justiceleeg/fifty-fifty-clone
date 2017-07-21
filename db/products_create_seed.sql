@@ -78,7 +78,7 @@ INSERT INTO products (
 VALUES (
   '12oz/354mL Fifty/Fifty Bottle',
   1,
-  'https://cdn.shopify.com/s/files/1/1699/2423/products/12oz_550x550.jpg?v=1492382332',
+  'https://cdn.shopify.com/s/files/1/1699/2423/products/12oz-flip-lime_550x550.jpg?v=1496383231',
   15.99,
   'https://cdn.shopify.com/s/files/1/1699/2423/files/Double_Wall_Banner-2_95638307-2ddc-4f2b-b158-9da6262bf735.JPG?16199066906524892307',
   'Our 12oz vacuum-insulated bottles keep liquids hot or cold all day. This compact size fits easily in your backpack and holds enough to keep you hydrated at the dog park or while out running errands. Or fill it up in the morning with enough coffee to fuel you through your commute and most (or even all!) of your work day.',
@@ -110,7 +110,7 @@ VALUES (
 ),(
   '18oz/530mL Fifty/Fifty Bottle',
   1,
-  'https://cdn.shopify.com/s/files/1/1699/2423/products/18oz_b31691e8-e7d1-43a8-8771-78e6902ce127_550x550.jpg?v=1492382338',
+  'https://cdn.shopify.com/s/files/1/1699/2423/products/18oz-3_finger-blue_550x550.png?v=1496383541',
   19.99,
   null,
   'Our 18oz vacuum-insulated bottles keep liquids hot or cold all day. This compact size fits easily in your backpack and holds enough to keep you hydrated at the dog park or while out running errands. Or fill it up in the morning with enough coffee to fuel you through your commute and most (or even all!) of your work day.',
